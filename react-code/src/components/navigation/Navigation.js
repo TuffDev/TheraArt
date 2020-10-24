@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
@@ -31,11 +31,34 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event) => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
+  );
+}
+
+
+function a11yProps(index) {
+    return {
+        id: `nav-tab-${index}`,
+        'aria-controls': `nav-tabpanel-${index}`,
+    };
+}
+
 const Navigation = ({route}) => {
     const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+    const history = useHistory();
+    const [value, setValue] = React.useState(history.location.pathname);
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+        event.preventDefault();
+        setValue(newValue)
+        history.push(newValue);
     };
     return (
         <nav className="breadcrumbs">
@@ -44,13 +67,13 @@ const Navigation = ({route}) => {
                     <Typography className={classes.title} variant="h6" noWrap>
                         TheraArt-2020
                     </Typography>
-                    <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered className={classes.tabs}>
-                        {routes.map(route => (
-                            <Tab label={typeof(route.name) !== "undefined" ? route.name : "add a name!"} href={route.path}/>
+                    <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered
+                          className={classes.tabs}>
+                        {routes.map((route, i) => (
+                            typeof (route.name) !== "undefined" ?
+                                <Tab label={route.name} value={route.path}/> : null
                         ))}
-                    <Tab label="Item Two"/>
-                    <Tab label="Item Three"/>
-                </Tabs>
+                    </Tabs>
                 </Toolbar>
             </AppBar>
         </nav>
