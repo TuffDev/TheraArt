@@ -2,13 +2,15 @@ import Home from "../components/home";
 import TherapistPage from "../components/therapists/TherapistPage";
 export const routes = [
   {
-    path: "/therapists",
+    path: "/home",
+    name: "Home",
     private: false,
-    component: TherapistPage,
+    component: Home
   },
   {
-    path: "/",
+    path: "/therapists",
     private: false,
-    component: Home,
+    name: "Therapists",
+    component: TherapistPage,
   }
 ];

@@ -24,16 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: "none",
     [theme.breakpoints.up("sm")]: {
       display: "block",
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    title: {
-        display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-        },
-    },
+    }},
     tabs: {
         margin: 'auto'
     }
@@ -56,8 +47,6 @@ const Navigation = ({route}) => {
                         {routes.map(route => (
                             <Tab label={typeof(route.name) !== "undefined" ? route.name : "add a name!"} href={route.path}/>
                         ))}
-                    <Tab label="Item Two"/>
-                    <Tab label="Item Three"/>
                 </Tabs>
                 </Toolbar>
             </AppBar>

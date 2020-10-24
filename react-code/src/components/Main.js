@@ -10,6 +10,7 @@ import PrivateRoute from "./auth/PrivateRoute";
 import SignIn from "./auth/SignIn";
 import { AuthContext } from "./auth/auth";
 import TherapistPage from "./therapists/TherapistPage";
+import Home from "./home";
 
 export default function Main() {
   return (
