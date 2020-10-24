@@ -17,15 +17,16 @@ const options = {
       props: {
         gutterBottom: true,
         variant: 'h5',
+        align: "center"
       },
     },
     h2: { component: Typography, props: { gutterBottom: true, variant: 'h6' } },
     h3: { component: Typography, props: { gutterBottom: true, variant: 'subtitle1' } },
     h4: {
       component: Typography,
-      props: { gutterBottom: true, variant: 'caption', paragraph: true, color: "secondary" },
+      props: { gutterBottom: true, variant: 'caption', paragraph: true, color: "secondary", align: "center" },
     },
-    p: { component: Typography, props: { paragraph: true } },
+    p: { component: Typography, props: { paragraph: true, align: "center" } },
     a: { component: Link, props: {color: "secondary"}},
     li: {
       component: withStyles(styles)(({ classes, ...props }) => (
