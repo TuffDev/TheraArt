@@ -1,2 +1,4 @@
 flask==1.1.2
 gunicorn==20.0.4
+google-cloud-datastore==1.15.3
+google~=3.0.0
