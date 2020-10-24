@@ -14,6 +14,12 @@ export const routes = [
     component: Home,
   },
   {
+    path: "/about",
+    private: false,
+    name: "About",
+    component: Home,
+  },
+  {
     path: "/",
     private: false,
     component: Home
