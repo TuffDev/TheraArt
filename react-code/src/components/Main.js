@@ -17,7 +17,6 @@ export default function Main() {
       <MuiThemeProvider theme={theme}>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Switch>
-            <Route exact path="/therapists" component={TherapistPage} />
             {routes.map((route) => (
               <PrivateRoute
                 key={route.path}
