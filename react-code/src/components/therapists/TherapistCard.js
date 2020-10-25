@@ -59,7 +59,14 @@ export default function TherapistCard(props) {
           <IconButton aria-label="settings">{/*<MoreVertIcon />*/}</IconButton>
         }
         title={props.therapist.name}
-        subheader="September 14, 2016"
+        subheader={
+
+          <Typography variant="body2" component="p">
+                    Rating: {props.therapist.rating}/5.
+          <br />
+          {"Address: " + props.therapist.address}
+        </Typography>
+        }
       />
       {
         <CardMedia
