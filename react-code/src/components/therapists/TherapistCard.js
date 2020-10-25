@@ -61,11 +61,13 @@ export default function TherapistCard(props) {
         title={props.therapist.name}
         subheader="September 14, 2016"
       />
-      {/*<CardMedia
-        className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="Paella dish"
-      />*/}
+      {
+        <CardMedia
+          className={classes.media}
+          image="https://www.google.com/search?q=lakers+logo&sxsrf=ALeKk03R1dqT3wotpod3ZXRerYTcyxfu_A:1603584385295&tbm=isch&source=iu&ictx=1&fir=mZ_u-r5XDqvGmM%252CrSS84B2RY-FutM%252C_&vet=1&usg=AI4_-kSJ2LXLGuM7B8UtIb1WGMCWY-HMyw&sa=X&ved=2ahUKEwjBiJytuc7sAhUJKawKHdBPDuQQ9QF6BAgGEFo#imgrc=mZ_u-r5XDqvGmM"
+          title="Paella dish"
+        />
+      }
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           This impressive paella is a perfect party dish and a fun meal to cook

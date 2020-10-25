@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Markdown from "./Markdown";
 import motd from "./motd.md";
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+
+import ReactDOM from "react-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   markdown: {
     padding: theme.spacing(2),
-  }
+  },
 }));
 
 export default function Home() {
@@ -22,8 +24,8 @@ export default function Home() {
 
   useEffect(() => {
     fetch(motd)
-      .then(res => res.text())
-      .then(post => setMessage(post))
+      .then((res) => res.text())
+      .then((post) => setMessage(post))
       .catch((err) => console.error(err));
   });
 
@@ -37,5 +39,5 @@ export default function Home() {
         </Grid>
       </Grid>
     </div>
-  )
+  );
 }
