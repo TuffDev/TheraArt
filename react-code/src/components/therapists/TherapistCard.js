@@ -64,7 +64,7 @@ export default function TherapistCard(props) {
       {
         <CardMedia
           className={classes.media}
-          image="https://www.google.com/search?q=lakers+logo&sxsrf=ALeKk03R1dqT3wotpod3ZXRerYTcyxfu_A:1603584385295&tbm=isch&source=iu&ictx=1&fir=mZ_u-r5XDqvGmM%252CrSS84B2RY-FutM%252C_&vet=1&usg=AI4_-kSJ2LXLGuM7B8UtIb1WGMCWY-HMyw&sa=X&ved=2ahUKEwjBiJytuc7sAhUJKawKHdBPDuQQ9QF6BAgGEFo#imgrc=mZ_u-r5XDqvGmM"
+          image={"https://i.pinimg.com/originals/13/b3/57/13b357a4989873b84615bf3dd6c42196.jpg"}
           title="Paella dish"
         />
       }
