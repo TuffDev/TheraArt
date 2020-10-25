@@ -5,7 +5,7 @@ runtime: python37
 
 default_expiration: "2s"
 
-handlers:
+#handlers:
 #- url: /static/
 #  static_dir: myapp/static
 #  http_headers:
