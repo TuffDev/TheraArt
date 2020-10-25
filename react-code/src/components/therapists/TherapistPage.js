@@ -15,13 +15,15 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: theme.palette.text.secondary,
     bacground: theme.palette.success.light,
+    maxHeight: 850,
+    overflow: "auto"
   },
 }));
 
 const location = {
-  address: "1600 Amphitheatre Parkway, Mountain View, california.",
-  lat: 37.42216,
-  lng: -122.08427,
+  address: "1 E Jackson Blvd, Chicago, IL 60605",
+  lat: 41.8770902,
+  lng: -87.6310575,
 };
 
 export default function TherapistPage() {
@@ -37,7 +39,7 @@ export default function TherapistPage() {
       </Grid>
       <Grid item xs={6} md={9}>
         <Paper className={classes.paper}>
-          <TherapistMap location={location} zoomLevel={17} />
+          <TherapistMap location={location} zoomLevel={10} />
         </Paper>
       </Grid>
     </Grid>

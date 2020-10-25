@@ -52,7 +52,7 @@ export default function TherapistCard(props) {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            {props.therapist.name.substring(0, 1)}
+            {props.therapist.name.substring(0, 2)}
           </Avatar>
         }
         action={
@@ -64,15 +64,13 @@ export default function TherapistCard(props) {
       {
         <CardMedia
           className={classes.media}
-          image={"https://i.pinimg.com/originals/13/b3/57/13b357a4989873b84615bf3dd6c42196.jpg"}
-          title="Paella dish"
+          image={props.therapist.image}
+          title={props.therapist.name}
         />
       }
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          {props.therapist.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
