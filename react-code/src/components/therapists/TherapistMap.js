@@ -35,7 +35,6 @@ export default function TherapistMap({location, zoomLevel}) {
         fetch('/therapist/all')
             .then(resp => resp.json())
             .then(data => {
-                console.log(data);
                 setData(data);
             })
     }, []);
