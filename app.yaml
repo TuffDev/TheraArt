@@ -10,12 +10,12 @@ handlers:
 #  static_dir: myapp/static
 #  http_headers:
 #    Access-Control-Allow-Origin: "*"
-- url: /static
-  static_dir: static/build/static
-  expiration: '2s'
-- url: /
-  static_dir: static/build
-  expiration: '2s'
+#- url: /static
+#  static_dir: static/build/static
+#  expiration: '2s'
+#- url: /
+#  static_dir: static/build
+#  expiration: '2s'
 
 entrypoint: gunicorn -b :$PORT wsgi:app
 
