@@ -20,7 +20,7 @@ const options = {
         align: "center"
       },
     },
-    h2: { component: Typography, props: { gutterBottom: true, variant: 'h6' } },
+    h2: { component: Typography, props: { gutterBottom: true, variant: 'h6' , align: "center"} },
     h3: { component: Typography, props: { gutterBottom: true, variant: 'subtitle1' } },
     h4: {
       component: Typography,
